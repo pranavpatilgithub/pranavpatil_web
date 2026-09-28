@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { projects } from "@/lib/content";
 import Eyebrow from "./Eyebrow";
+import Papers from "./Papers";
 
 export default function Work() {
   const peek = useRef<HTMLDivElement>(null);
@@ -55,9 +57,9 @@ export default function Work() {
       </div>
 
       {projects.map((p, i) => (
-        <a
-          key={p.title}
-          href={p.href}
+        <Link
+          key={p.slug}
+          href={`/work/${p.slug}`}
           onMouseEnter={() => setActive(i)}
           onMouseLeave={() => setActive(null)}
           className="reveal group relative isolate grid grid-cols-[auto_1fr] items-baseline gap-5 border-t border-line py-[clamp(24px,3.4vw,38px)] last:border-b sm:grid-cols-[auto_1fr_auto]"
@@ -87,8 +89,10 @@ export default function Work() {
           <span className="hidden -translate-x-2.5 text-[13px] text-dim opacity-0 transition-[opacity,transform] duration-400 group-hover:translate-x-0 group-hover:opacity-100 sm:block">
             View case ↗
           </span>
-        </a>
+        </Link>
       ))}
+
+      <Papers />
     </section>
   );
 }

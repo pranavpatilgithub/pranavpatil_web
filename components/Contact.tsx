@@ -26,7 +26,7 @@ export default function Contact() {
         href={`mailto:${site.email}`}
         className="reveal group relative inline-block font-display text-[clamp(2.1rem,9vw,7rem)] font-normal leading-[0.95] tracking-[-0.04em]"
       >
-        {site.email}
+        pranav patil
         <span className="absolute bottom-[0.08em] left-0 h-0.5 w-full origin-right scale-x-0 bg-accent transition-transform duration-550 ease-soft group-hover:origin-left group-hover:scale-x-100" />
       </a>
 

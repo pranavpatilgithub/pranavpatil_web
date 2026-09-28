@@ -22,7 +22,7 @@ export default function Footer() {
 
   return (
     <footer className="page-x mx-auto flex max-w-[1240px] flex-wrap justify-between gap-3.5 border-t border-line pb-10 pt-6 text-[13px] text-dim">
-      <span>Built from scratch, 2026</span>
+      <span>Built by Pranav Patil - 2026</span>
       <span>
         {site.city} — {time}
       </span>
